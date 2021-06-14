@@ -10,7 +10,7 @@ const Component = () => (
   <>
     <Masonry
       key="masonry"
-      sx={{ bg: "orange", py: [4, 5] }}
+      sx={{ backgroundImage:'linear-gradient(to bottom, #1c2963, #233477, #29408d, #2e4ca3, #3358b9)', py: [4, 5] }}
       breakpointCols={{
         10000: 4,
         1024: 3,

@@ -8,9 +8,7 @@ import useSound from "use-sound";
 const Page = () => {
   const [play] = useSound("./music.mp3");
 
-  useEffect(() => {
-    play();
-  });
+  
 
   return (
     <>

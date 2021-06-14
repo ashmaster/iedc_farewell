@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Happy Birthday Annlee 🎉</title>
+        <title>Thank You Guys 💓💓</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"

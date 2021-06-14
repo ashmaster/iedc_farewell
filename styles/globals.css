@@ -2,3 +2,46 @@ html {
   overflow-x: hidden;
   width: "100%";
 }
+
+.imageDesc{
+  height:220px;
+  background:#3358B9;
+  color:#fff;
+  position:relative;
+  max-width: 200px;
+  padding: 0 10px 0 10px;
+}
+
+.imageDesc::after{
+  content:"";
+  position:absolute;
+  height:0;
+  width:0;
+  left:100%;
+  top:0;
+  border:110px solid transparent;
+  border-left: 20px solid #3358B9;
+}
+.imageDesc2{
+  height:220px;
+  background:#3358B9;
+  color:#fff;
+  position:relative;
+  max-width:200px;
+  padding: 0 10px 0 10px;
+}
+
+.imageDesc2::before{
+  content:"";
+  position:absolute;
+  height:0;
+  width:0;
+  right:100%;
+  top:0;
+  border:110px solid transparent;
+  border-right: 20px solid #3358B9;
+}
+
+@media screen and (max-width : 360px) {
+  
+}
