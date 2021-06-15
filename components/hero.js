@@ -4,6 +4,7 @@ import { Box, Container } from "theme-ui";
 import { Waypoint } from "react-waypoint";
 import Confetti from 'react-confetti'
 import useWindowSize from 'react-use/lib/useWindowSize'
+import execoms from "../lib/execom";
 
 const Component = () => {
   const [confetti, setConfetti] = useState(false)
@@ -43,6 +44,7 @@ const Component = () => {
   const imageBox = useRef(null);
   return (
     <div>
+
       <Box
         sx={{
           backgroundImage: ["url('https://support.scdn.co/web/_next/static/assets/d3f3f22/search-mobile.webp')", "url('https://support.scdn.co/web/_next/static/assets/d3f3f22/search-mobile.webp')", "url('https://support.scdn.co/web/_next/static/assets/d3f3f22/search-desktop.webp')"],
@@ -61,7 +63,10 @@ const Component = () => {
           justifyContent: 'center',
           alignItems: 'center',
         }}
-      >
+      >{confetti ? <Confetti
+        width={width}
+        height={height * 6}
+      /> : null}
         <h1 sx={{ my: [0], fontSize: [5, 6, 7], color: 'white' }}>IEDCMEC</h1>
         <p sx={{ fontSize: [3, 4, 5], mt: [1] }}>
           FAREWELL 2021
@@ -107,10 +112,7 @@ const Component = () => {
         <p sx={{ fontSize: [3, 4, 5], mt: [1] }}>
           THANK YOU GUYS !💓
         </p>
-        {confetti ? <Confetti
-          width={width}
-          height={height * 4}
-        /> : null}
+
         <Box
           ref={imageBox}
           sx={{
@@ -125,7 +127,7 @@ const Component = () => {
 
             //padding:['0 5% 0 5%']
           }}>
-          {new Array(9).fill(1).map((item, index) => {
+          {execoms.map((item, index) => {
             return (
               <div
                 sx={{
@@ -137,44 +139,44 @@ const Component = () => {
                 {imagePos[index] % 2 !== 0 ? (
                   <div
                     className="imageDesc">
-                      <p sx = {{
-                        lineHeight:'22px',
-                        textAlign:'left',
-                        fontStyle:'italic',
-                        fontWeight:'bold',
-                        fontSize:['12px', '14px', '14px']
-                      }}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
-                      </p>
+                    <p sx={{
+                      lineHeight: '22px',
+                      textAlign: 'left',
+                      fontStyle: 'italic',
+                      fontWeight: 'bold',
+                      fontSize: ['14px', '14px', '14px']
+                    }}>
+                      {item.text}
+                    </p>
                   </div>) : null}
-          <img
-            src="./annlee.jpeg"
-            sx={{
-              width: [200],
-              mx: "auto",
-              cursor: "pointer",
-              transition: "1s",
-            }}
-          />
-          {imagePos[index] % 2 === 0 ? (
-          <div
-          className="imageDesc2">
-            <p sx = {{
-                        lineHeight:'22px',
-                        textAlign:'left',
-                        fontStyle:'italic',
-                        fontWeight:'bold',
-                        fontSize:['12px', '14px', '14px']
+                <img
+                  src={item.image}
+                  sx={{
+                    width: [200],
+                    mx: "auto",
+                    cursor: "pointer",
+                    transition: "1s",
+                  }}
+                />
+                {imagePos[index] % 2 === 0 ? (
+                  <div
+                    className="imageDesc2">
+                    <p sx={{
+                      lineHeight: '22px',
+                      textAlign: 'right',
+                      fontStyle: 'italic',
+                      fontWeight: 'bold',
+                      fontSize: ['14px', '14px', '14px']
 
-                      }}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
-                      </p>
-        </div>) : null}
-                </div>
-        )
-            })}
+                    }}>
+                      {item.text}
+                    </p>
+                  </div>) : null}
+              </div>
+            )
+          })}
 
-      </Box>
+        </Box>
       </Box>
     </div >
   );

@@ -64,7 +64,7 @@ const Component = ({
         />
       ) : null}
 
-      {name ? <p sx={{ fontSize: [1], mb: [3] }}>- {name}</p> : null}
+      {name ? <p sx={{ fontSize: [1], mb: [3], fontStyle:'italic', fontWeight:'bold' }}>- {name}</p> : null}
     </Box>
   );
 };

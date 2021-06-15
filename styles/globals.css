@@ -8,6 +8,7 @@ html {
   background:#3358B9;
   color:#fff;
   position:relative;
+  
   max-width: 200px;
   padding: 0 10px 0 10px;
 }
@@ -40,8 +41,4 @@ html {
   top:0;
   border:110px solid transparent;
   border-right: 20px solid #3358B9;
-}
-
-@media screen and (max-width : 360px) {
-  
 }
