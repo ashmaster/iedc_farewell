@@ -140,11 +140,11 @@ const Component = () => {
                   <div
                     className="imageDesc">
                     <p sx={{
-                      lineHeight: '22px',
+                      lineHeight: ['19px','22px','22px'],
                       textAlign: 'left',
                       fontStyle: 'italic',
                       fontWeight: 'bold',
-                      fontSize: ['14px', '14px', '14px']
+                      fontSize: ['12px', '14px', '14px']
                     }}>
                       {item.text}
                     </p>
@@ -166,7 +166,7 @@ const Component = () => {
                       textAlign: 'right',
                       fontStyle: 'italic',
                       fontWeight: 'bold',
-                      fontSize: ['14px', '14px', '14px']
+                      fontSize: ['12px', '14px', '14px']
 
                     }}>
                       {item.text}
