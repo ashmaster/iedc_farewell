@@ -63,10 +63,7 @@ const Component = () => {
           justifyContent: 'center',
           alignItems: 'center',
         }}
-      >{confetti ? <Confetti
-        width={width}
-        height={height * 6}
-      /> : null}
+      >
         <h1 sx={{ my: [0], fontSize: [5, 6, 7], color: 'white' }}>IEDCMEC</h1>
         <p sx={{ fontSize: [3, 4, 5], mt: [1] }}>
           FAREWELL 2021
@@ -108,7 +105,10 @@ const Component = () => {
           alignItems: 'center',
           textAlign: 'center',
         }}
-      >
+      >{confetti ? <Confetti
+        width={width}
+        height={height * 6}
+      /> : null}
         <p sx={{ fontSize: [3, 4, 5], mt: [1] }}>
           THANK YOU GUYS !💓
         </p>
